@@ -97,9 +97,15 @@ p {
     width: 50%;
     margin-bottom: 30px;
   }
+  .footer {
+    padding: 70px 0;
+  }
 }
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
+  }
+  .footer {
+    padding: 70px 0;
   }
 }
