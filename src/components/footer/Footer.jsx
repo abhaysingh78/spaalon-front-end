@@ -44,7 +44,6 @@ const Footer = () => {
             <h4>CONTACTS</h4>
             <ul>
               <li>
-                
                 <p> Connaught Place, New Delhi, India</p>
               </li>
               <li>
@@ -65,7 +64,7 @@ const Footer = () => {
               />
               <button className="text-white bg-orange-600 w-12">&rarr;</button>
             </div>
-            <h4>Follow us</h4>
+            <h4 className="mt-4">Follow us</h4>
             <div className="social-links">
               <a href="#">
                 <i className="fab fa-facebook-f"></i>
