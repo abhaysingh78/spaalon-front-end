@@ -16,13 +16,13 @@ const Discover = () => {
             </h3>
           </div>
           <div className=" md:flex mt-4 md:bg-white md:p-1 rounded">
-            <div className="bg-white my-1 md:border-r-2 md:my-0 border-gray-200 flex">
+            <div className="rounded bg-white my-1 md:border-r-2 md:my-0 border-gray-200 flex">
               <input
                 className=" px-12 rounded  w-full md:w-96 py-4 focus:outline-none placeholder:text-slate-400 "
                 type="text"
                 placeholder="What are you looking for..."
               />
-              <div className="mt-2 p-2 md:mt-1 opacity-40 md:p-2">
+              <div className=" mt-2 p-2 md:mt-1 opacity-40 md:p-2">
                 <img
                   width={30}
                   src="https://cdn-icons-png.flaticon.com/512/2811/2811806.png"
@@ -30,7 +30,7 @@ const Discover = () => {
                 />
               </div>
             </div>{" "}
-            <div className="flex bg-white md:flex">
+            <div className="rounded flex bg-white md:flex">
               <input
                 className=" py-4 px-12 rounded w-full md:w-[20rem] focus:outline-none"
                 type="text"
