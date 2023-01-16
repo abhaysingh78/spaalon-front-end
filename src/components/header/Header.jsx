@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.css";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
-  const [show, setShow] = useState(false);
-  // const showMenu = () => {
-  //   setShow(true);
-  //   console.log(show);
-  // };
   const mobile_icon = document.getElementById("mobile-icon");
   const mobile_menu = document.getElementById("mobile-menu");
   const hamburger_icon = document.querySelector("#mobile-icon i");
@@ -20,10 +16,9 @@ const Header = () => {
     icon.classList.toggle("fa-xmark");
   }
 
-  // mobile_icon.addEventListener('click', openCloseMenu);
   return (
     <header class='h-20 bg-white'>
-      <nav class='relative px-2 py-4'>
+      <nav class='relative px-8 sm:px-16 py-4'>
         <div class='container mx-auto flex justify-between items-center'>
           <img
             src='https://avrasys.hu/logoipsum-logo-54.svg'
@@ -80,9 +75,7 @@ const Header = () => {
 
           {/* <!-- Mobile menu icon --> */}
           <button onClick={openCloseMenu} id='mobile-icon' class='md:hidden'>
-            <i onClick={() => changeIcon(this)} class='fa-solid fa-bars'>
-              121
-            </i>
+            <FaBars onClick={() => changeIcon(this)} />
           </button>
         </div>
 
