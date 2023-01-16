@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import ReactRoundedImage from "react-rounded-image";
 
 const Trending = ({ heading, dec, align, bg, style }) => {
   var settings = {
@@ -38,72 +39,102 @@ const Trending = ({ heading, dec, align, bg, style }) => {
   };
   return (
     <div
-      className={`xl:px-44 bg-${bg}-50 pt-8 text-${align ? align : "center"}`}
+      className={`xl:px-44 bg-${bg}-100 py-8 text-${align ? align : "center"}`}
     >
-      <div className="my-8" style={style && style}>
-        <hr className="my-6 w-20 border-2 border-orange-700 bg-orange-700" />
-        <h2 className="text-2xl font-semibold">{heading}</h2>
-        <p className=" text-xl text-gray-700 font-semibold">{dec}</p>
+      <div className='my-8 px-12' style={style && style}>
+        <hr className='my-6 w-20 border-2 border-orange-700 bg-orange-700' />
+        <h2 className='text-2xl font-semibold'>{heading}</h2>
+        <p className=' text-xl text-gray-700 font-semibold'>{dec}</p>
       </div>
       <Slider {...settings}>
-        <div class="flex px-4 flex-col outline-none  shadow-sm rounded-xl  dark:border-gray-700 dark:shadow-slate-700/[.7]">
-          <img
-            class="w-48 h-48 rounded-full"
-            src="https://spaalon.com/images/serviceImg.png"
-            alt="Image Description"
-          />
-          <div class="p-4 md:p-5">
-            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Massage
-            </h3>
+        <div className='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+          <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
+            <div className='w-full flex items-center justify-center '>
+              <div className='flex flex-col items-center'>
+                <ReactRoundedImage
+                  image='https://picsum.photos/800/600?random=1'
+                  roundedColor='#fff'
+                  imageWidth='170'
+                  imageHeight='170'
+                  roundedSize='13'
+                />
+                <p className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'>
+                  Ricardo Boveta
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+          <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
+            <div className='w-full flex items-center justify-center '>
+              <div className='flex flex-col items-center'>
+                <ReactRoundedImage
+                  image='https://picsum.photos/800/600?random=1'
+                  roundedColor='#fff'
+                  imageWidth='170'
+                  imageHeight='170'
+                  roundedSize='13'
+                />
+                <p className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'>
+                  Ricardo Boveta
+                </p>
+              </div>
+            </div>
           </div>
         </div>{" "}
-        <div class="flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-          <img
-            class="w-full h-auto rounded-t-xl"
-            src="https://spaalon.com/images/serviceImg.png"
-            alt="Image Description"
-          />
-          <div class="p-4 md:p-5">
-            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Massage
-            </h3>
+        <div class='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+          <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
+            <div className='w-full flex items-center justify-center '>
+              <div className='flex flex-col items-center'>
+                <ReactRoundedImage
+                  image='https://picsum.photos/800/600?random=1'
+                  roundedColor='#fff'
+                  imageWidth='170'
+                  imageHeight='170'
+                  roundedSize='13'
+                />
+                <p className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'>
+                  Ricardo Boveta
+                </p>
+              </div>
+            </div>
           </div>
         </div>{" "}
-        <div class="flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-          <img
-            class="w-full h-auto rounded-t-xl"
-            src="https://spaalon.com/images/serviceImg.png"
-            alt="Image Description"
-          />
-          <div class="p-4 md:p-5">
-            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Massage
-            </h3>
+        <div class='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+          <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
+            <div className='w-full flex items-center justify-center '>
+              <div className='flex flex-col items-center'>
+                <ReactRoundedImage
+                  image='https://picsum.photos/800/600?random=1'
+                  roundedColor='#fff'
+                  imageWidth='170'
+                  imageHeight='170'
+                  roundedSize='13'
+                />
+                <p className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'>
+                  Ricardo Boveta
+                </p>
+              </div>
+            </div>
           </div>
         </div>{" "}
-        <div class="flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-          <img
-            class="w-full h-auto rounded-t-xl"
-            src="https://spaalon.com/images/serviceImg.png"
-            alt="Image Description"
-          />
-          <div class="p-4 md:p-5">
-            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Massage
-            </h3>
-          </div>
-        </div>{" "}
-        <div class="flex px-4 flex-col  outline-none shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-          <img
-            class="w-full h-auto rounded-t-xl"
-            src="https://spaalon.com/images/serviceImg.png"
-            alt="Image Description"
-          />
-          <div class="p-4 md:p-5">
-            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Massage
-            </h3>
+        <div class='flex px-4 flex-col  outline-none shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+          <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
+            <div className='w-full flex items-center justify-center '>
+              <div className='flex flex-col items-center'>
+                <ReactRoundedImage
+                  image='https://picsum.photos/800/600?random=1'
+                  roundedColor='#fff'
+                  imageWidth='170'
+                  imageHeight='170'
+                  roundedSize='13'
+                />
+                <p className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'>
+                  Ricardo Boveta
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Slider>
