@@ -21,13 +21,13 @@ const Home = () => {
       <Trending
         heading="What's Trending"
         dec="Let's not wait for the Perfect Look"
-        bg='gray'
+        bg="#F4F4F4"
         style={style}
       />
       <Trending
-        heading='Popular Spa & Salon'
-        dec='We want you to look fabulous'
-        align='left'
+        heading="Popular Spa & Salon"
+        dec="We want you to look fabulous"
+        align="left"
       />
       <ViewAll />
       <BestDeals />
