@@ -16,7 +16,7 @@ const Discover = () => {
         <div className=" md:flex mt-4 bg-white p-1 rounded">
           <div className="border-r-2 border-gray-200 flex">
             <input
-              className="py-4 px-12 rounded  md:w-96 focus:outline-none   "
+              className="py-4 px-12 rounded  md:w-96 focus:outline-none placeholder:text-slate-400  "
               type="text"
               placeholder="What are you looking for..."
             />

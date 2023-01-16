@@ -22,7 +22,7 @@ const Header = () => {
         <div class="container mx-auto flex justify-between items-center">
           <img
             width={150}
-            className="ml-28"
+            className=""
             src="https://spaalon.com/images/SpaalonLogoRed.jpg"
             alt="Tailwindcss Navigation"
           />

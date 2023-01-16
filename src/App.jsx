@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Category from "./pages/category/Category";
 import Home from "./pages/home/Home";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
+          <Route path="/category" element={<Category />} />
         </Routes>
       </BrowserRouter>
     </div>
