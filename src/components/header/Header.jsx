@@ -22,7 +22,7 @@ const Header = () => {
         <div class="container mx-auto flex justify-between items-center">
           <img
             width={150}
-            className="ml-20"
+            className="ml-28"
             src="https://spaalon.com/images/SpaalonLogoRed.jpg"
             alt="Tailwindcss Navigation"
           />
@@ -106,24 +106,24 @@ const Header = () => {
               </li>
               <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
                 <a href="#" class="block pl-7">
-                  News
+                  Hair
                 </a>
               </li>
               <li class="border-b-2 border-white hover:bg-red-400 hover:text-white">
                 <a href="#" class="block pl-11">
-                  Services <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i>
+                  Hair <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i>
                 </a>
 
                 {/* <!-- Submenu starts --> */}
                 <ul class="bg-white text-gray-800 w-full">
                   <li class="text-sm leading-8 font-normal hover:bg-slate-200">
                     <a class="block pl-16" href="#">
-                      Webdesign
+                      Nails
                     </a>
                   </li>
                   <li class="text-sm leading-8 font-normal hover:bg-slate-200">
                     <a class="block pl-16" href="#">
-                      Digital marketing
+                      Nails
                     </a>
                   </li>
                   <li class="text-sm leading-8 font-normal hover:bg-slate-200">

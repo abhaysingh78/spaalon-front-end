@@ -2,8 +2,9 @@ import React from "react";
 
 export const BestDeals = () => {
   return (
-    <div className="items-center md:mx-48">
+    <div className="items-center md:mx-48 mb-12">
       <div className="my-2">
+        <hr className="my-6 w-20 border-2 border-orange-700 bg-orange-700" />
         <h2 className="text-2xl font-semibold">Best Deals</h2>
         <p className=" text-xl text-gray-700 font-semibold">
           Come experience the best haircut and color services

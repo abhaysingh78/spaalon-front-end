@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="" />
-        <div className="my-4 float-right">
+        <div className="my-4 p-2 md:float-right">
           <span className="text-white text-sm ">
             {" "}
             &#169; {new Date().getFullYear()} Spaalon

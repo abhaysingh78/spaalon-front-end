@@ -41,7 +41,7 @@ const Trending = ({ heading, dec, align, bg, style }) => {
       className={`xl:px-44 bg-${bg}-50 pt-8 text-${align ? align : "center"}`}
     >
       <div className="my-8" style={style && style}>
-        <hr className="my-6 w-20 border-2 border-red-700 bg-red-700" />
+        <hr className="my-6 w-20 border-2 border-orange-700 bg-orange-700" />
         <h2 className="text-2xl font-semibold">{heading}</h2>
         <p className=" text-xl text-gray-700 font-semibold">{dec}</p>
       </div>
@@ -54,55 +54,55 @@ const Trending = ({ heading, dec, align, bg, style }) => {
           />
           <div class="p-4 md:p-5">
             <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Card title
+              Massage
             </h3>
           </div>
         </div>{" "}
         <div class="flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
           <img
             class="w-full h-auto rounded-t-xl"
-            src="https://picsum.photos/800/600?random=1"
+            src="https://spaalon.com/images/serviceImg.png"
             alt="Image Description"
           />
           <div class="p-4 md:p-5">
             <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Card title
+              Massage
             </h3>
           </div>
         </div>{" "}
         <div class="flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
           <img
             class="w-full h-auto rounded-t-xl"
-            src="https://picsum.photos/800/600?random=1"
+            src="https://spaalon.com/images/serviceImg.png"
             alt="Image Description"
           />
           <div class="p-4 md:p-5">
             <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Card title
+              Massage
             </h3>
           </div>
         </div>{" "}
         <div class="flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
           <img
             class="w-full h-auto rounded-t-xl"
-            src="https://picsum.photos/800/600?random=1"
+            src="https://spaalon.com/images/serviceImg.png"
             alt="Image Description"
           />
           <div class="p-4 md:p-5">
             <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Card title
+              Massage
             </h3>
           </div>
         </div>{" "}
         <div class="flex px-4 flex-col  outline-none shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
           <img
             class="w-full h-auto rounded-t-xl"
-            src="https://picsum.photos/800/600?random=1"
+            src="https://spaalon.com/images/serviceImg.png"
             alt="Image Description"
           />
           <div class="p-4 md:p-5">
             <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-              Card title
+              Massage
             </h3>
           </div>
         </div>

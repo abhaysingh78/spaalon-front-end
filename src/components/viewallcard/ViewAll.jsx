@@ -2,8 +2,8 @@ import React from "react";
 
 const ViewAll = () => {
   return (
-    <div className="md:mx-48">
-      <div className="bg-cover   bg-[url('https://images.pexels.com/photos/897262/pexels-photo-897262.jpeg?auto=compress&cs=tinysrgb&w=1000')] h-96 bg-no-repeat w-[100%] rounded-md  flex my-12 items-center bg-opacity-">
+    <div className="md:mx-48 my-16 ">
+      <div className="bg-cover bg-gray-800   bg-[url('https://images.pexels.com/photos/897262/pexels-photo-897262.jpeg?auto=compress&cs=tinysrgb&w=1000')] h-96 bg-no-repeat w-[100%] rounded-md  flex my-12 items-center bg-opacity-">
         <div className="my-auto p-4 ml-8  rounded  ">
           <span className="text-white ">SPAALON</span>
           <h1 className="text-3xl text-white font-bold mt-2">
