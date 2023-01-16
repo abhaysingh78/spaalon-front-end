@@ -2,218 +2,240 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav class="bg-white border-gray-200 px-2 md:px-4 py-2.5 dark:bg-gray-900">
-      <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
-        <a href="https://flowbite.com" class="flex items-center">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            class="h-6 mr-3 sm:h-9"
-            alt="Flowbite Logo"
-          />
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
-          </span>
-        </a>
-        <div class="flex items-center md:order-2">
-          <a
-            href="#"
-            class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
-          >
-            Login
+    <header class="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
+      <nav
+        class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+        aria-label="Global"
+      >
+        <div class="flex items-center justify-between">
+          <a class="flex-none text-xl font-semibold dark:text-white" href="#">
+            Brand
           </a>
-          <a
-            href="#"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          >
-            Sign up
-          </a>
-          <button
-            data-collapse-toggle="mega-menu"
-            type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mega-menu"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              aria-hidden="true"
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+          <div class="sm:hidden">
+            <button
+              type="button"
+              class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+              data-hs-collapse="#navbar-collapse-basic"
+              aria-controls="navbar-collapse-basic"
+              aria-label="Toggle navigation"
             >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
+              <svg
+                class="hs-collapse-open:hidden w-4 h-4"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+              <svg
+                class="hs-collapse-open:block hidden w-4 h-4"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div
-          id="mega-menu"
-          class="items-center justify-between hidden w-full text-sm md:flex md:w-auto md:order-1"
-        >
-          <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li>
-            <li>
+
+        <div id="navbar-collapse-basic" class="hidden basis-full grow sm:block">
+          <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
+            <a class="font-medium text-blue-500" href="#" aria-current="page">
+              Active
+            </a>
+
+            <div class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
               <button
-                id="mega-menu-dropdown-button"
-                data-dropdown-toggle="mega-menu-dropdown"
-                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                id="hs-mega-menu-basic-dr"
+                type="button"
+                class="flex items-center w-full text-gray-600 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 "
               >
-                Company{" "}
+                Dropdown
                 <svg
-                  aria-hidden="true"
-                  class="w-5 h-5 ml-1 md:w-4 md:h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+                  class="ml-2 w-2.5 h-2.5 text-gray-600"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
+                    d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
                   ></path>
                 </svg>
               </button>
-              <div
-                id="mega-menu-dropdown"
-                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700"
-              >
-                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
-                  <ul
-                    class="space-y-4"
-                    aria-labelledby="mega-menu-dropdown-button"
+
+              <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:left-0 before:w-full before:h-5">
+                <a
+                  class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  href="#"
+                >
+                  About
+                </a>
+                <div class="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
+                  <button
+                    type="button"
+                    class="w-full flex justify-between w-full items-center text-sm text-gray-800 rounded-md py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                   >
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Library
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Resources
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Pro Version
-                      </a>
-                    </li>
-                  </ul>
+                    Sub Menu
+                    <svg
+                      class="sm:-rotate-90 ml-2 w-2.5 h-2.5 text-gray-600"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </button>
+
+                  <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 right-full !mx-[10px]">
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      About
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Downloads
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Team Account
+                    </a>
+                  </div>
                 </div>
-                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
-                  <ul class="space-y-4">
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Newsletter
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Playground
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        License
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="p-4 text-gray-900 dark:text-white">
-                  <ul class="space-y-4">
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Support Center
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
-                      >
-                        Terms
-                      </a>
-                    </li>
-                  </ul>
+
+                <a
+                  class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  href="#"
+                >
+                  Downloads
+                </a>
+                <a
+                  class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  href="#"
+                >
+                  Team Account
+                </a>
+              </div>
+            </div>
+
+            <div class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
+              <button
+                type="button"
+                class="flex items-center w-full text-gray-600 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500"
+              >
+                Mega Menu
+                <svg
+                  class="ml-2 w-2.5 h-2.5 text-gray-600"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+              </button>
+
+              <div class="hs-dropdown-menu transition-[opacity,margin] sm:border duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-10 top-full left-0 min-w-[15rem] bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute before:-top-5 before:left-0 before:w-full before:h-5">
+                <div class="sm:grid sm:grid-cols-3">
+                  <div class="flex flex-col">
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      About
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Services
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Customer Story
+                    </a>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Careers
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Careers: Overview
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Careers: Apply
+                    </a>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Log In
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Sign Up
+                    </a>
+                  </div>
                 </div>
               </div>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Team
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+            </div>
+
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+              href="#"
+            >
+              Link
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
