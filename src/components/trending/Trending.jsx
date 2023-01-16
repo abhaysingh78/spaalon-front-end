@@ -47,7 +47,7 @@ const Trending = ({ heading, dec, align, bg, style }) => {
         <p className=' text-xl text-gray-700 font-semibold'>{dec}</p>
       </div>
       <Slider {...settings}>
-        <div className='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+        <div className='flex px-4 flex-col outline-none rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
           <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
             <div className='w-full flex items-center justify-center '>
               <div className='flex flex-col items-center'>
@@ -65,7 +65,7 @@ const Trending = ({ heading, dec, align, bg, style }) => {
             </div>
           </div>
         </div>
-        <div class='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+        <div class='flex px-4 flex-col outline-none rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
           <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
             <div className='w-full flex items-center justify-center '>
               <div className='flex flex-col items-center'>
@@ -83,7 +83,7 @@ const Trending = ({ heading, dec, align, bg, style }) => {
             </div>
           </div>
         </div>{" "}
-        <div class='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+        <div class='flex px-4 flex-col outline-none rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
           <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
             <div className='w-full flex items-center justify-center '>
               <div className='flex flex-col items-center'>
@@ -101,7 +101,7 @@ const Trending = ({ heading, dec, align, bg, style }) => {
             </div>
           </div>
         </div>{" "}
-        <div class='flex px-4 flex-col outline-none  shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+        <div class='flex px-4 flex-col outline-none rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
           <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
             <div className='w-full flex items-center justify-center '>
               <div className='flex flex-col items-center'>
@@ -119,7 +119,7 @@ const Trending = ({ heading, dec, align, bg, style }) => {
             </div>
           </div>
         </div>{" "}
-        <div class='flex px-4 flex-col  outline-none shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+        <div class='flex px-4 flex-col  outline-none rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
           <div className='bg-white flex p-4 flex-col outline-none  shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] rounded-lg'>
             <div className='w-full flex items-center justify-center '>
               <div className='flex flex-col items-center'>
