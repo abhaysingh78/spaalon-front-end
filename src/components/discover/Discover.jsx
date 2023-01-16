@@ -15,7 +15,7 @@ const Discover = () => {
               Looking for Best Spa & Salon Near you ?
             </h3>
           </div>
-          <div className=" md:flex mt-4 md:bg-white md:p-1 rounded">
+          <div className="mx-2 md:mx-0 md:flex mt-4 md:bg-white md:p-1 rounded">
             <div className="rounded bg-white my-1 md:border-r-2 md:my-0 border-gray-200 flex">
               <input
                 className=" px-12 rounded  w-full md:w-96 py-4 focus:outline-none placeholder:text-slate-400 "
