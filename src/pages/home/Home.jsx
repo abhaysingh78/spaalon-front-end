@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <Header />
       <Discover />
-      <Trending
+      {/* <Trending
         heading="What's Trending"
         dec="Let's not wait for the Perfect Look"
         bg="#F4F4F4"
@@ -28,7 +28,7 @@ const Home = () => {
         heading="Popular Spa & Salon"
         dec="We want you to look fabulous"
         align="left"
-      />
+      /> */}
       <ViewAll />
       <BestDeals />
       <Footer />
