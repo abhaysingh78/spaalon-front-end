@@ -3,7 +3,8 @@ import { BestDeals } from "../../components/bestdeals/BestDeals";
 import Discover from "../../components/discover/Discover";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-// import Trending from "../../components/trending/Trending";
+import Popular from "../../components/poplular/Popular";
+import Trending from "../../components/trending/Trending";
 import ViewAll from "../../components/viewallcard/ViewAll";
 
 const Home = () => {
@@ -18,17 +19,17 @@ const Home = () => {
     <>
       <Header />
       <Discover />
-      {/* <Trending
+      <Trending
         heading="What's Trending"
         dec="Let's not wait for the Perfect Look"
-        bg="#F4F4F4"
+        bg='gray'
         style={style}
       />
-      <Trending
-        heading="Popular Spa & Salon"
-        dec="We want you to look fabulous"
-        align="left"
-      /> */}
+      <Popular
+        heading='Popular Spa & Salon'
+        dec='We want you to look fabulous'
+        align='left'
+      />
       <ViewAll />
       <BestDeals />
       <Footer />
