@@ -69,8 +69,12 @@ const Details = () => {
             </div>
           </div>
         </div>{" "}
-        <div>
-          <Calendar onChange={onChange} value={value} />
+        <div className="ml-48">
+          <div className="ml-48">
+            {" "}
+            <h1 className="text-center text-2xl">Book An Appointment</h1>{" "}
+            <Calendar onChange={onChange} value={value} />{" "}
+          </div>{" "}
         </div>
       </div>
     </div>

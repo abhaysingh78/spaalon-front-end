@@ -47,13 +47,13 @@ const Trending = ({ heading, dec, align, bg, style }) => {
       </div>
       <Slider {...settings}>
         <div className="flex px-4 flex-col outline-none rounded-xl ">
-          <div className="bg-white flex p-4 flex-col outline-none  shadow-sm   rounded-lg">
+          <div className="bg-white flex p-4 flex-col outline-none   shadow-sm   rounded-lg">
             <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center rounded-full">
                 <img
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
-                  className="rounded-full"
+                  className="rounded-full w-28"
                 />
 
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
@@ -67,10 +67,10 @@ const Trending = ({ heading, dec, align, bg, style }) => {
           <div className="bg-white flex p-4 flex-col outline-none  shadow-sm  rounded-lg">
             <div className="w-full flex items-center justify-center ">
               <div className="flex flex-col items-center">
-              <img
+                <img
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
-                  className="rounded-full"
+                  className="rounded-full w-28"
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut
@@ -83,10 +83,10 @@ const Trending = ({ heading, dec, align, bg, style }) => {
           <div className="bg-white flex p-4 flex-col outline-none  shadow-sm  rounded-lg">
             <div className="w-full flex items-center justify-center ">
               <div className="flex flex-col items-center">
-              <img
+                <img
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
-                  className="rounded-full"
+                  className="rounded-full w-28"
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut
@@ -99,10 +99,10 @@ const Trending = ({ heading, dec, align, bg, style }) => {
           <div className="bg-white flex p-4 flex-col outline-none  shadow-sm   rounded-lg">
             <div className="w-full flex items-center justify-center ">
               <div className="flex flex-col items-center">
-              <img
+                <img
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
-                  className="rounded-full"
+                  className="rounded-full w-28"
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut
@@ -115,10 +115,10 @@ const Trending = ({ heading, dec, align, bg, style }) => {
           <div className="bg-white flex p-4 flex-col outline-none  shadow-sm  rounded-lg">
             <div className="w-full flex items-center justify-center ">
               <div className="flex flex-col items-center">
-              <img
+                <img
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
-                  className="rounded-full"
+                  className="rounded-full w-28"
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut

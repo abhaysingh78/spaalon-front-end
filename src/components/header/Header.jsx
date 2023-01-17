@@ -56,10 +56,10 @@ const Header = () => {
                   <a href="#">Nails</a>
                 </li>
                 <li className="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Ad campaigns</a>
+                  <a href="#">Hair</a>
                 </li>
                 <li className="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">UX Design</a>
+                  <a href="#">Hair</a>
                 </li>
               </ul>
               {/* <!-- Submenu ends --> */}
@@ -70,21 +70,23 @@ const Header = () => {
             <li>
               <a href="#">Face</a>
             </li>
-            <li>
-              {" "}
-              <a
-                href="#"
-                className="  rounded-3xl hidden md:flex"
-                role="button"
-              >
-                <img
-                  className=""
-                  width={22}
-                  src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
-                  alt=""
-                />
-              </a>
-            </li>{" "}
+            <Link to="/signin">
+              <li>
+                {" "}
+                <a
+                  href="#"
+                  className="  rounded-3xl hidden md:flex"
+                  role="button"
+                >
+                  <img
+                    className=""
+                    width={22}
+                    src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </Link>
             <li>
               {" "}
               <a

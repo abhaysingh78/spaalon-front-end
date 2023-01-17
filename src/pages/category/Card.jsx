@@ -8,7 +8,7 @@ const Card = () => {
         <div className="mx-4 my-4 md:my-8 ">
           <div className="">
             <img
-              className=" rounded-md w-full md:w-[22rem] hover:scale-90 transition duration-300 ease-in-out"
+              className=" rounded-md w-full md:w-[22rem] hover:scale-105 transition duration-300 ease-in-out"
               src="https://api.spaalon.com/media/shop_image/3_Po47aIS.jpg"
               alt=""
             />
@@ -30,7 +30,7 @@ const Card = () => {
         <div className="mx-4 my-8 ">
           <div className="">
             <img
-              className=" rounded-md w-full md:w-[22rem] hover:scale-90 transition duration-300 ease-in-out"
+              className=" rounded-md w-full md:w-[22rem] hover:scale-105 transition duration-300 ease-in-out"
               src="https://api.spaalon.com/media/shop_image/3_Po47aIS.jpg"
               alt=""
             />
@@ -52,7 +52,7 @@ const Card = () => {
         <div className="mx-4 my-8 ">
           <div className="">
             <img
-              className=" rounded-md w-full md:w-[22rem] hover:scale-90 transition duration-300 ease-in-out"
+              className=" rounded-md w-full md:w-[22rem] hover:scale-105 transition duration-300 ease-in-out"
               src="https://api.spaalon.com/media/shop_image/3_Po47aIS.jpg"
               alt=""
             />
@@ -74,7 +74,7 @@ const Card = () => {
         <div className="mx-4 my-8 ">
           <div className="">
             <img
-              className=" rounded-md w-full md:w-[22rem] hover:scale-90 transition duration-300 ease-in-out"
+              className=" rounded-md w-full md:w-[22rem] hover:scale-105 transition duration-300 ease-in-out"
               src="https://api.spaalon.com/media/shop_image/3_Po47aIS.jpg"
               alt=""
             />

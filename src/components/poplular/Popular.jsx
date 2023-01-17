@@ -46,10 +46,27 @@ const Popular = ({ heading, dec, align, bg, style }) => {
         <p className=" text-xl text-gray-700 font-semibold">{dec}</p>
       </div>
       <Slider {...settings}>
-        <div class="flex px-4 flex-col my-2 drop-shadow-md outline-none rounded-xl">
-          <div className="bg-white flex p-4 flex-col outline-none  shadow-sm rounded-lg">
+        <div class="flex px-4 flex-col my-2  outline-none rounded-xl">
+          <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
             <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col   ">
+                <img
+                  src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
+                  alt=""
+                  className="hover:scale-105 transition-all ease-in-out"
+                />
+                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
+                  NK Salon
+                </p>
+                <p className="text-orange-600">Open</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex px-4 flex-col my-2  outline-none rounded-xl ">
+          <div className="bg-white flex p-4 flex-col outline-none  rounded-lg">
+            <div className="w-full flex items-center justify-center ">
+              <div className="flex flex-col ">
                 <img
                   src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
                   alt=""
@@ -62,10 +79,27 @@ const Popular = ({ heading, dec, align, bg, style }) => {
             </div>
           </div>
         </div>
-        <div class="flex px-4 flex-col my-2  drop-shadow-md outline-none rounded-xl ">
-          <div className="bg-white flex p-4 flex-col outline-none  shadow-sm rounded-lg">
+        <div class="flex px-4 flex-col my-2   outline-none rounded-xl">
+          <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
             <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col ">
+                <img
+                  src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
+                  alt=""
+                  className="hover:scale-105 transition-all ease-in-out"
+                />
+                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
+                  Salon
+                </p>
+                <p className="text-orange-600">Open</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex px-4 flex-col my-2   outline-none rounded-xl">
+          <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
+            <div className="w-full flex items-center justify-center ">
+              <div className="flex flex-col ">
                 <img
                   src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
                   alt=""
@@ -78,42 +112,10 @@ const Popular = ({ heading, dec, align, bg, style }) => {
             </div>
           </div>
         </div>
-        <div class="flex px-4 flex-col my-2  drop-shadow-md outline-none rounded-xl">
-          <div className="bg-white flex p-4 flex-col outline-none  shadow-sm rounded-lg">
+        <div class="flex px-4 flex-col my-2   outline-none rounded-xl">
+          <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
             <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col items-center">
-                <img
-                  src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
-                  alt=""
-                  className="hover:scale-105 transition-all ease-in-out"
-                />
-                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
-                  Salon
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex px-4 flex-col my-2  drop-shadow-md outline-none rounded-xl">
-          <div className="bg-white flex p-4 flex-col outline-none  shadow-sm rounded-lg">
-            <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col items-center">
-                <img
-                  src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
-                  alt=""
-                  className="hover:scale-105 transition-all ease-in-out"
-                />
-                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
-                  Salon
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex px-4 flex-col my-2  drop-shadow-md outline-none rounded-xl">
-          <div className="bg-white flex p-4 flex-col outline-none  shadow-sm rounded-lg">
-            <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col ">
                 <img
                   src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
                   alt=""
