@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className="h-16 bg-white">
-      <nav className="relative px-8 sm:px-16 py-4 ">
+      <nav className=" px-8 sm:px-16 py-4 ">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/">
             <img
@@ -31,7 +31,7 @@ const Header = () => {
           </Link>
 
           <ul className="hidden md:flex mr-20  space-x-8 text-gray-600 ">
-            <Link to="category/hair">
+            <Link to="/category/hair">
               <li>
                 <a href="#">Hair</a>
               </li>
@@ -117,9 +117,11 @@ const Header = () => {
           <div id="mobile-menu" className="mobile-menu absolute top-23 w-full">
             <ul className="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
               <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="https://google.com" className="block pl-7">
-                  Hair
-                </a>
+                <Link to="/category/hair">
+                  <a href="" className="block pl-7">
+                    Hair
+                  </a>
+                </Link>
               </li>
               <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
                 <a href="#" className="block pl-7">
