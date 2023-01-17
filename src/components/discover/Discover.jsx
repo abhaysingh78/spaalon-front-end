@@ -4,7 +4,7 @@ const Discover = () => {
   return (
     <>
       {/* // big screen */}
-      <div className="h-screen md:h-96 bg-cover bg-no-repeat bg-[url('https://images.pexels.com/photos/3997981/pexels-photo-3997981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] flex  items-center justify-center">
+      <div className="h-screen md:h-[30rem] bg-cover bg-no-repeat bg-[url('https://images.pexels.com/photos/3997981/pexels-photo-3997981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] flex  items-center justify-center">
         <div>
           <div>
             {" "}
