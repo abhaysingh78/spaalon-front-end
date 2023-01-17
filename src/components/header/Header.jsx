@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const mobile_icon = document.getElementById("mobile-icon");
@@ -20,17 +21,21 @@ const Header = () => {
     <header class="h-16 bg-white">
       <nav class="relative px-8 sm:px-16 py-4 ">
         <div class="container mx-auto flex justify-between items-center">
-          <img
-            width={150}
-            className=""
-            src="https://spaalon.com/images/SpaalonLogoRed.jpg"
-            alt="Tailwindcss Navigation"
-          />
+          <Link to="/">
+            <img
+              width={150}
+              className=""
+              src="https://spaalon.com/images/SpaalonLogoRed.jpg"
+              alt="Tailwindcss Navigation"
+            />
+          </Link>
 
           <ul class="hidden md:flex mr-20  space-x-8 text-gray-600 ">
-            <li>
-              <a href="#">Hair</a>
-            </li>
+            <Link to="category/hair">
+              <li>
+                <a href="#">Hair</a>
+              </li>
+            </Link>
             <li>
               <a href="#">body</a>
             </li>

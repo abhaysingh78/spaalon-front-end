@@ -1,0 +1,4 @@
+.img-animation {
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}

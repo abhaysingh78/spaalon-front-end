@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../../components/header/Header";
+import Card from "./Card";
+import SortButton from "./SortButton";
 
 const Category = () => {
   return (
@@ -23,6 +25,8 @@ const Category = () => {
           </div>
         </div>
       </div>
+      <SortButton />
+      <Card />
     </>
   );
 };

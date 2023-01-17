@@ -9,7 +9,7 @@ const Discover = () => {
           <div>
             {" "}
             <h1 className="text-3xl mb-4 md:mb-0 md:text-4xl text-center font-bold text-white tracking-wide">
-              Discover & Books
+              Discover & Book
             </h1>
             <h3 className="text-xl md:text-2xl text-center text-white font-semibold">
               Looking for Best Spa & Salon Near you ?
