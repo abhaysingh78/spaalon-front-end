@@ -18,9 +18,9 @@ const Header = () => {
   }
 
   return (
-    <header class="h-16 bg-white">
-      <nav class="relative px-8 sm:px-16 py-4 ">
-        <div class="container mx-auto flex justify-between items-center">
+    <header className="h-16 bg-white">
+      <nav className="relative px-8 sm:px-16 py-4 ">
+        <div className="container mx-auto flex justify-between items-center">
           <Link to="/">
             <img
               width={150}
@@ -30,7 +30,7 @@ const Header = () => {
             />
           </Link>
 
-          <ul class="hidden md:flex mr-20  space-x-8 text-gray-600 ">
+          <ul className="hidden md:flex mr-20  space-x-8 text-gray-600 ">
             <Link to="category/hair">
               <li>
                 <a href="#">Hair</a>
@@ -39,26 +39,26 @@ const Header = () => {
             <li>
               <a href="#">body</a>
             </li>
-            <li class="flex relative group">
-              <a href="#" class="mr-1">
+            <li className="flex relative group">
+              <a href="#" className="mr-1">
                 Spa
               </a>
-              <i class="fa-solid fa-chevron-down fa-2xs pt-3"></i>
+              <i className="fa-solid fa-chevron-down fa-2xs pt-3"></i>
               {/* <!-- Submenu starts --> */}
-              <ul class="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
-                <li class="text-sm hover:bg-slate-100 leading-8">
+              <ul className="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
+                <li className="text-sm hover:bg-slate-100 leading-8">
                   <a href="#">Hair</a>
                 </li>
-                <li class="text-sm hover:bg-slate-100 leading-8">
+                <li className="text-sm hover:bg-slate-100 leading-8">
                   <a href="#">Rica</a>
                 </li>
-                <li class="text-sm hover:bg-slate-100 leading-8">
+                <li className="text-sm hover:bg-slate-100 leading-8">
                   <a href="#">Nails</a>
                 </li>
-                <li class="text-sm hover:bg-slate-100 leading-8">
+                <li className="text-sm hover:bg-slate-100 leading-8">
                   <a href="#">Ad campaigns</a>
                 </li>
-                <li class="text-sm hover:bg-slate-100 leading-8">
+                <li className="text-sm hover:bg-slate-100 leading-8">
                   <a href="#">UX Design</a>
                 </li>
               </ul>
@@ -72,7 +72,11 @@ const Header = () => {
             </li>
             <li>
               {" "}
-              <a href="#" class="  rounded-3xl hidden md:flex" role="button">
+              <a
+                href="#"
+                className="  rounded-3xl hidden md:flex"
+                role="button"
+              >
                 <img
                   className=""
                   width={22}
@@ -83,7 +87,11 @@ const Header = () => {
             </li>{" "}
             <li>
               {" "}
-              <a href="#" class="  rounded-3xl hidden md:flex" role="button">
+              <a
+                href="#"
+                className="  rounded-3xl hidden md:flex"
+                role="button"
+              >
                 <img
                   className=""
                   width={22}
@@ -95,67 +103,71 @@ const Header = () => {
           </ul>
 
           {/* <!-- Mobile menu icon --> */}
-          <button onClick={openCloseMenu} id="mobile-icon" class="md:hidden">
+          <button
+            onClick={openCloseMenu}
+            id="mobile-icon"
+            className="md:hidden"
+          >
             <FaBars onClick={() => changeIcon(this)} />
           </button>
         </div>
 
         {/* <!-- Mobile menu --> */}
-        <div class="md:hidden flex justify-center mt-3 w-full">
-          <div id="mobile-menu" class="mobile-menu absolute top-23 w-full">
-            <ul class="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="https://google.com" class="block pl-7">
+        <div className="md:hidden flex justify-center mt-3 w-full">
+          <div id="mobile-menu" className="mobile-menu absolute top-23 w-full">
+            <ul className="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
+              <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
+                <a href="https://google.com" className="block pl-7">
                   Hair
                 </a>
               </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="#" class="block pl-7">
+              <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
+                <a href="#" className="block pl-7">
                   Hair
                 </a>
               </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white">
-                <a href="#" class="block pl-11">
-                  Hair <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i>
+              <li className="border-b-2 border-white hover:bg-red-400 hover:text-white">
+                <a href="#" className="block pl-11">
+                  Hair <i className="fa-solid fa-chevron-down fa-2xs pt-4"></i>
                 </a>
 
                 {/* <!-- Submenu starts --> */}
-                <ul class="bg-white text-gray-800 w-full">
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
+                <ul className="bg-white text-gray-800 w-full">
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <a className="block pl-16" href="#">
                       Nails
                     </a>
                   </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <a className="block pl-16" href="#">
                       Nails
                     </a>
                   </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <a className="block pl-16" href="#">
                       SEO
                     </a>
                   </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <a className="block pl-16" href="#">
                       Ad campaigns
                     </a>
                   </li>
-                  <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                    <a class="block pl-16" href="#">
+                  <li className="text-sm leading-8 font-normal hover:bg-slate-200">
+                    <a className="block pl-16" href="#">
                       UX Design
                     </a>
                   </li>
                 </ul>
                 {/* <!-- Submenu ends --> */}
               </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="#" class="block pl-7">
+              <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
+                <a href="#" className="block pl-7">
                   About
                 </a>
               </li>
-              <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                <a href="#" class="block pl-7">
+              <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
+                <a href="#" className="block pl-7">
                   Contact
                 </a>
               </li>
