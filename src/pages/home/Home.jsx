@@ -3,7 +3,7 @@ import { BestDeals } from "../../components/bestdeals/BestDeals";
 import Discover from "../../components/discover/Discover";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import Trending from "../../components/trending/Trending";
+// import Trending from "../../components/trending/Trending";
 import ViewAll from "../../components/viewallcard/ViewAll";
 
 const Home = () => {
