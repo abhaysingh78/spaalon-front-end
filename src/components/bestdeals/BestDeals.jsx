@@ -11,11 +11,11 @@ export const BestDeals = () => {
         </p>
       </div>
 
-      <div className="my-4 md:flex flex-wrap md:my-4  ">
+      <div className="my-4 md:flex md:flex-wrap md:my-4  ">
         <div className="my-4 md:mr-2">
           <a
             href="#"
-            class="flex flex-col items-center    md:w-[35rem] bg-white border rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 hover:"
+            class="flex flex-col items-center   md:w-[35rem] bg-white border rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 hover:"
           >
             <img
               class="object-cover w-full rounded-t-lg h-32 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg   "
@@ -35,7 +35,7 @@ export const BestDeals = () => {
         <div className="my-4 ">
           <a
             href="#"
-            class="flex flex-col items-center md:w-[35rem] bg-white border rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 "
+            class="flex flex-col items-center  md:w-[35rem] bg-white border rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 "
           >
             <img
               class="object-cover w-full rounded-t-lg h-32 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"

@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const Popular = ({ heading, dec, align, bg, style }) => {
   var settings = {
@@ -49,50 +50,56 @@ const Popular = ({ heading, dec, align, bg, style }) => {
         <div class="flex px-4 flex-col my-2  outline-none rounded-xl">
           <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
             <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col   ">
-                <img
-                  src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
-                  alt=""
-                  className="hover:scale-105 transition-all ease-in-out"
-                />
-                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
-                  NK Salon
-                </p>
-                <p className="text-orange-600">Open</p>
-              </div>
+              <Link to="/salon/details/1">
+                <div className="flex flex-col   ">
+                  <img
+                    src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
+                    alt=""
+                    className="hover:scale-105 transition-all ease-in-out "
+                  />
+                  <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
+                    NK Salon
+                  </p>
+                  <p className="text-orange-600">Open</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
         <div class="flex px-4 flex-col my-2  outline-none rounded-xl ">
           <div className="bg-white flex p-4 flex-col outline-none  rounded-lg">
             <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col ">
-                <img
-                  src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
-                  alt=""
-                  className="hover:scale-105 transition-all ease-in-out"
-                />
-                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
-                  Salon
-                </p>
-              </div>
+              <Link to="/salon/details/1">
+                <div className="flex flex-col ">
+                  <img
+                    src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
+                    alt=""
+                    className="hover:scale-105 transition-all ease-in-out"
+                  />
+                  <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
+                    Salon
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
         <div class="flex px-4 flex-col my-2   outline-none rounded-xl">
           <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
             <div className="w-full flex items-center justify-center ">
-              <div className="flex flex-col ">
-                <img
-                  src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
-                  alt=""
-                  className="hover:scale-105 transition-all ease-in-out"
-                />
-                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
-                  Salon
-                </p>
-                <p className="text-orange-600">Open</p>
-              </div>
+              <Link>
+                <div className="flex flex-col ">
+                  <img
+                    src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
+                    alt=""
+                    className="hover:scale-105 transition-all ease-in-out"
+                  />
+                  <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
+                    Salon
+                  </p>
+                  <p className="text-orange-600">Open</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

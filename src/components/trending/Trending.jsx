@@ -53,7 +53,12 @@ const Trending = ({ heading, dec, align, bg, style }) => {
                 <img
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
-                  className="rounded-full w-28"
+                  style={{
+                    width: "170px",
+                    height: "170px",
+                    objectFit: "contain",
+                  }}
+                  className="rounded-full"
                 />
 
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
@@ -71,6 +76,11 @@ const Trending = ({ heading, dec, align, bg, style }) => {
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
                   className="rounded-full w-28"
+                  style={{
+                    width: "170px",
+                    height: "170px",
+                    objectFit: "contain",
+                  }}
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut
@@ -87,6 +97,11 @@ const Trending = ({ heading, dec, align, bg, style }) => {
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
                   className="rounded-full w-28"
+                  style={{
+                    width: "170px",
+                    height: "170px",
+                    objectFit: "contain",
+                  }}
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut
@@ -103,6 +118,11 @@ const Trending = ({ heading, dec, align, bg, style }) => {
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
                   className="rounded-full w-28"
+                  style={{
+                    width: "170px",
+                    height: "170px",
+                    objectFit: "contain",
+                  }}
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut
@@ -119,6 +139,11 @@ const Trending = ({ heading, dec, align, bg, style }) => {
                   src="https://spaalon.com/images/serviceImg.png"
                   alt=""
                   className="rounded-full w-28"
+                  style={{
+                    width: "170px",
+                    height: "170px",
+                    objectFit: "contain",
+                  }}
                 />
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
                   Hair Cut

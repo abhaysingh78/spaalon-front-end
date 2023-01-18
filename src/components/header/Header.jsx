@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -7,8 +7,10 @@ const Header = () => {
   const mobile_icon = document.getElementById("mobile-icon");
   const mobile_menu = document.getElementById("mobile-menu");
   const hamburger_icon = document.querySelector("#mobile-icon i");
+  const [isOpen, setIsOpen] = useState(false);
 
   function openCloseMenu() {
+    setIsOpen(true);
     mobile_menu.classList.toggle("block");
     mobile_menu.classList.toggle("active");
   }
