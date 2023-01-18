@@ -1,0 +1,50 @@
+.custom-cardContent {
+  background-color: #f1f5f5;
+  height: 100%;
+  padding-left: 3rem;
+  padding-top: 2.5rem;
+  width: 251px;
+  padding-bottom: none;
+}
+.custom-cardContent ul li {
+  cursor: pointer;
+  padding-bottom: 1.5rem;
+  color: #323232;
+}
+.custom-cardContent ul li:hover {
+  color: #111;
+}
+
+.card-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  font-family: "arial";
+  color: #444;
+}
+.table-heading {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.booking-table {
+  margin-left: 32px;
+}
+table td {
+  padding: 0.75rem !important;
+}
+table th {
+  color: #7d7d7d;
+  text-align: left;
+  padding: 0.75rem;
+}
+.custom-table tbody tr td {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f1f5f5;
+}
