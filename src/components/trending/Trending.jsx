@@ -1,7 +1,24 @@
 import React from "react";
 import Slider from "react-slick";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Trending = ({ heading, dec, align, bg, style }) => {
+  const [trending, setTrending] = useState([]);
+
+  const fetchApi = async () => {
+    const res = await axios.get(
+      "https://spaalon.harij.in/api/shop/TrendingService"
+    );
+
+    setTrending(res.data.trendingservice);
+    console.log(res.data.trendingservice, "trending");
+  };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -45,6 +62,7 @@ const Trending = ({ heading, dec, align, bg, style }) => {
         <h2 className="text-2xl font-semibold">{heading}</h2>
         <p className=" text-xl text-gray-700 font-semibold">{dec}</p>
       </div>
+
       <Slider {...settings}>
         <div className="flex px-4 flex-col outline-none rounded-xl ">
           <div className="bg-white flex p-4 flex-col outline-none   shadow-sm   rounded-lg">
@@ -62,12 +80,13 @@ const Trending = ({ heading, dec, align, bg, style }) => {
                 />
 
                 <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
-                  MakeUp
+                  MakeUp33
                 </p>
               </div>
             </div>
           </div>
         </div>
+        
         <div class="flex px-4 flex-col outline-none rounded-xl  ">
           <div className="bg-white flex p-4 flex-col outline-none  shadow-sm  rounded-lg">
             <div className="w-full flex items-center justify-center ">

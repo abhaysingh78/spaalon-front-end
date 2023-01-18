@@ -6,14 +6,14 @@ const Card = () => {
     <>
       <div className="grid md:grid-cols-3 md:mx-48">
         <div className="mx-4 my-4 md:my-8 ">
-          <div className="">
+          <div className="mx-4 md:mx-0">
             <img
               className=" rounded-md w-full md:w-[22rem] hover:scale-105 transition duration-300 ease-in-out"
               src="https://api.spaalon.com/media/shop_image/3_Po47aIS.jpg"
               alt=""
             />
           </div>
-          <div className="flex space-x-48 md:space-x-0 mt-2">
+          <div className="flex space-x-48   mx-4 md:mx-0 md:space-x-0 mt-2">
             <div>
               {" "}
               <h2>Test Salon-2</h2>

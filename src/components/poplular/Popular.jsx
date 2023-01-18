@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Popular = ({ heading, dec, align, bg, style }) => {
+  const [popular, setPopular] = useState([]);
+
+  const fetchApi = async () => {
+    const res = await axios.get(
+      "https://spaalon.harij.in/api/shop/PopularShop"
+    );
+    // console.log(res.data.popularShop, "popular");
+    setPopular(res.data.popularShop);
+  };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -38,6 +53,7 @@ const Popular = ({ heading, dec, align, bg, style }) => {
     ],
   };
   return (
+    // {popular && popular?.map ()}
     <div
       className={`xl:px-44 bg-${bg}-100 py-8 text-${align ? align : "center"}`}
     >
@@ -47,25 +63,6 @@ const Popular = ({ heading, dec, align, bg, style }) => {
         <p className=" text-xl text-gray-700 font-semibold">{dec}</p>
       </div>
       <Slider {...settings}>
-        <div class="flex px-4 flex-col my-2  outline-none rounded-xl">
-          <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
-            <div className="w-full flex items-center justify-center ">
-              <Link to="/salon/details/1">
-                <div className="flex flex-col   ">
-                  <img
-                    src="https://api.spaalon.com/media/shop_image/image_7.jpeg"
-                    alt=""
-                    className="hover:scale-105 transition-all ease-in-out "
-                  />
-                  <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-left text-black">
-                    NK Salon
-                  </p>
-                  <p className="text-orange-600">Open</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
         <div class="flex px-4 flex-col my-2  outline-none rounded-xl ">
           <div className="bg-white flex p-4 flex-col outline-none  rounded-lg">
             <div className="w-full flex items-center justify-center ">
@@ -84,6 +81,7 @@ const Popular = ({ heading, dec, align, bg, style }) => {
             </div>
           </div>
         </div>
+
         <div class="flex px-4 flex-col my-2   outline-none rounded-xl">
           <div className="bg-white flex p-4 flex-col outline-none   rounded-lg">
             <div className="w-full flex items-center justify-center ">
