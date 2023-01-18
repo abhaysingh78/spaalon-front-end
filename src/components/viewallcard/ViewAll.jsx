@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ViewAll = () => {
   return (
@@ -12,9 +13,11 @@ const ViewAll = () => {
           <p className="text-xl text-white font-bold ">
             Book an appointment now within seconds
           </p>
-          <button className="bg-orange-600 rounded font-semibold text-white mt-4 py-1 px-4">
-            View All
-          </button>
+          <Link to="/category/hair">
+            <button className="bg-orange-600 rounded font-semibold text-white mt-4 py-1 px-4">
+              View All
+            </button>
+          </Link>
         </div>
       </div>
     </div>
