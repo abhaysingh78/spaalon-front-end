@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Header = () => {
+  const [subMenu, setSubMenu] = useState([]);
+  const [isShown, setIsShown] = useState(false);
+
+  const fetchApi = async () => {
+    const res = await axios.get("https://spaalon.harij.in/api/shop/ShopMenu");
+    setSubMenu(res.data.menu);
+    console.log(res.data.menu, "header api");
+  };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
+
   const mobile_icon = document.getElementById("mobile-icon");
   const mobile_menu = document.getElementById("mobile-menu");
   const hamburger_icon = document.querySelector("#mobile-icon i");
@@ -33,45 +47,75 @@ const Header = () => {
           </Link>
 
           <ul className="hidden md:flex mr-20  space-x-8 text-gray-600 ">
-            <Link to="/category/hair">
+            {/* <Link to="/category/hair">
               <li>
                 <a href="#">Hair</a>
               </li>
             </Link>
             <li>
               <a href="#">body</a>
-            </li>
-            <li className="flex relative group">
-              <a href="#" className="mr-1">
-                Spa
-              </a>
-              <i className="fa-solid fa-chevron-down fa-2xs pt-3"></i>
-              {/* <!-- Submenu starts --> */}
-              <ul className="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
-                <li className="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Hair</a>
-                </li>
-                <li className="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Rica</a>
-                </li>
-                <li className="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Nails</a>
-                </li>
-                <li className="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Hair</a>
-                </li>
-                <li className="text-sm hover:bg-slate-100 leading-8">
-                  <a href="#">Hair</a>
-                </li>
-              </ul>
-              {/* <!-- Submenu ends --> */}
-            </li>
-            <li>
-              <a href="#">Nails</a>
-            </li>
-            <li>
-              <a href="#">Face</a>
-            </li>
+            </li> */}
+            {subMenu &&
+              subMenu?.map((el) => {
+                return (
+                  <li key={el.id} className="flex relative group">
+                    <a href="#" className="mr-1">
+                      {el.name}
+                    </a>
+                    <i className="fa-solid fa-chevron-down fa-2xs pt-3"></i>
+                    {/* <!-- Submenu starts --> */}
+                    <ul className="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
+                      {el.child.map((submenu) => {
+                        return (
+                          <li
+                            key={submenu.id}
+                            className="text-sm hover:bg-slate-100 leading-8"
+                            onMouseEnter={() => setIsShown(true)}
+                            onMouseLeave={() => setIsShown(false)}
+                          >
+                            <a href="#">{submenu.name}</a>
+                            <i className="fa-solid fa-chevron-down fa-2xs pt-3"></i>
+
+                            {isShown && (
+                              <ul className="absolute mt-8 bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
+                                {submenu &&
+                                  submenu.child.map((moresub) => {
+                                    return (
+                                      <li
+                                        key={moresub.id}
+                                        className="flex relative group"
+                                      >
+                                        <a href="#" className="mr-1">
+                                          {moresub.name}
+                                        </a>
+                                        <i className="fa-solid fa-chevron-down fa-2xs pt-3"></i>
+                                      </li>
+                                    );
+                                  })}
+
+                                {/* {submenu.child.map((moresub) => {
+                                  return (
+                                    <li
+                                      key={moresub.id}
+                                      className="flex relative group"
+                                    >
+                                      <a href="#" className="mr-1">
+                                        {moresub.name}
+                                      </a>
+                                    </li>
+                                  );
+                                })} */}
+                              </ul>
+                            )}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    {/* <!-- Submenu ends --> */}
+                  </li>
+                );
+              })}
+
             <Link to="/signin">
               <li>
                 {" "}

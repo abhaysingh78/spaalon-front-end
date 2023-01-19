@@ -15,6 +15,8 @@ const Home = () => {
     alignItems: "center",
   };
 
+  
+
   return (
     <>
       <Header />

@@ -34,6 +34,19 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
+  const defaultFields = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    mobile: "",
+    gender: "",
+    password: "",
+  };
+
+  const [signUpForm, setSignUpForm] = React.useState(defaultFields);
+
+  const handleChange = (e) => {};
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -76,6 +89,7 @@ export default function SignUp() {
                   fullWidth
                   id="firstName"
                   label="First Name"
+                  onChange={handleChange}
                   autoFocus
                 />
               </Grid>
@@ -86,6 +100,7 @@ export default function SignUp() {
                   id="lastName"
                   label="Last Name"
                   name="lastName"
+                  onChange={handleChange}
                   autoComplete="family-name"
                 />
               </Grid>
@@ -96,6 +111,7 @@ export default function SignUp() {
                   id="email"
                   label="Email Address"
                   name="email"
+                  onChange={handleChange}
                   autoComplete="email"
                 />
               </Grid>
@@ -107,6 +123,7 @@ export default function SignUp() {
                   label="Gender"
                   type="Gender"
                   id="Gender"
+                  onChange={handleChange}
                   autoComplete=""
                 />
               </Grid>{" "}
@@ -117,6 +134,7 @@ export default function SignUp() {
                   id="phone"
                   label="Phone Number"
                   name=""
+                  onChange={handleChange}
                   autoComplete=""
                 />
               </Grid>
@@ -128,6 +146,7 @@ export default function SignUp() {
                   label="Password"
                   type="password"
                   id="password"
+                  onChange={handleChange}
                   autoComplete="new-password"
                 />
               </Grid>
