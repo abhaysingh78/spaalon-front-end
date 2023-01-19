@@ -1,3 +1,34 @@
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px !important;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 1rem;
+  font-family: Roboto;
+}
+.account {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+.account-menu {
+  width: 360px;
+  margin-right: 2rem;
+  font-family: "HelveticaNeue";
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.account-content {
+  width: 100%;
+}
+
 .custom-cardContent {
   background-color: #f1f5f5;
   height: 100%;
@@ -29,9 +60,7 @@
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
-.booking-table {
-  margin-left: 32px;
-}
+
 table td {
   padding: 0.75rem !important;
 }
@@ -47,4 +76,20 @@ table th {
 
 .custom-table tbody tr:hover {
   background-color: #f1f5f5;
+}
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.btn_1 {
+  background: #e94e1e;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 25px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.875rem;
+  border-radius: 3px;
 }
