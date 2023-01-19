@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 // import Box from "@mui/material/Box";
@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 // import Button from "@mui/material/Button";
 // import Typography from "@mui/material/Typography";
 import "./mybooking.css";
+import axios from "axios";
 
 const MyBooking = () => {
   function createData(name, calories, fat, carbs, protein) {
@@ -29,24 +30,41 @@ const MyBooking = () => {
   const handleMoreData = () => {
     setNext(next + dataPerRow);
   };
+
+  useEffect(() => {
+    const fetchApi = async () => {
+      let result = await axios({
+        method: "post",
+        url: "https://spaalon.harij.in/api/order/OrderHistory",
+        data: {
+          user_id: 1,
+        },
+      });
+      console.log(result);
+    };
+    fetchApi();
+  }, []);
+
   return (
     <>
       <Header />
-      <div className='block sm:flex mx-[15%] my-[5%]'>
-        <Card>
-          <CardContent className='custom-cardContent'>
-            <div className='card-heading'>MY ACCOUNTS</div>
-            <ul>
-              <li>My Account</li>
-              <li>Booking-History</li>
-            </ul>
-          </CardContent>
-        </Card>
-        <div class='booking-table'>
-          <Card>
-            <CardContent>
+      {/* <div className='block sm:flex mx-[15%] my-[5%]'> */}
+      <div class='container'>
+        <div className='account'>
+          <div className='account-menu'>
+            <div className='custom-cardContent'>
+              <div className='card-heading'>MY ACCOUNTS</div>
+              <ul>
+                <li>My Account</li>
+                <li>Booking-History</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className='container'>
+            <div className='account-content'>
               <div class='table-heading'>Booking history</div>
-              <table class='table table-bordered custom-table'>
+              <table class='tablet able-bordered custom-table'>
                 <thead>
                   <tr>
                     <th scope='col'>Booking Id</th>
@@ -68,48 +86,21 @@ const MyBooking = () => {
                       </tr>
                     );
                   })}
-                  {/* <tr>
-                    <th scope='row'>1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                  </tr>
-                  <tr>
-                    <th scope='row'>2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                  </tr>
-                  <tr>
-                    <th scope='row'>3</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr> */}
                 </tbody>
               </table>
               {next < tableData?.length && (
-                <button onClick={handleMoreData}>Load more</button>
+                <div class='load-more'>
+                  <button onClick={handleMoreData} className='btn_1'>
+                    Load more
+                  </button>
+                </div>
               )}
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* </div> */}
       <Footer />
     </>
   );

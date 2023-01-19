@@ -1,11 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
-
 import "react-multi-carousel/lib/styles.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeToCart } from "../../redux/action/Action";
+
 const Trending = ({ heading, dec, align, bg, style }) => {
   const [trending, setTrending] = useState([]);
 
+  const state = useSelector(state => state.addToCartReducer);
+  const dispatch = useDispatch();
+  console.log(state);
   const fetchApi = async () => {
     let result = await fetch(
       "https://spaalon.harij.in/api/shop/TrendingService"
@@ -41,32 +46,38 @@ const Trending = ({ heading, dec, align, bg, style }) => {
     <div
       className={`xl:px-44 bg-${bg}-100 py-8 text-${align ? align : "center"}`}
     >
-      <div className="my-8 px-12" style={style && style}>
-        <hr className="my-6 w-20 border-2 border-orange-700 bg-orange-700" />
-        <h2 className="text-2xl font-semibold">{heading}</h2>
-        <p className=" text-xl text-gray-700 font-semibold">{dec}</p>
+      <div className='my-8 px-12' style={style && style}>
+        <hr className='my-6 w-20 border-2 border-orange-700 bg-orange-700' />
+        <h2 className='text-2xl font-semibold'>{heading}</h2>
+        <p className=' text-xl text-gray-700 font-semibold'>{dec}</p>
       </div>
 
       <Carousel responsive={responsive}>
         {trending?.map((item, i) => (
-          <div className="flex px-4 flex-col outline-none rounded-xl ">
-            <div className="bg-white flex p-4 flex-col outline-none shadow-sm rounded-lg">
-              <div className="w-full flex items-center justify-center ">
-                <div className="flex flex-col items-center rounded-full">
+          <div className='flex px-4 flex-col outline-none rounded-xl '>
+            <div className='bg-white flex p-4 flex-col outline-none shadow-sm rounded-lg'>
+              <div className='w-full flex items-center justify-center '>
+                <div className='flex flex-col items-center rounded-full'>
                   <img
                     src={item.image_url}
-                    alt=""
+                    alt=''
                     style={{
                       width: "170px",
                       height: "170px",
                       objectFit: "contain",
                     }}
-                    className="rounded-full"
+                    className='rounded-full'
                   />
 
-                  <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black">
+                  <p
+                    onClick={() => dispatch(addToCart(item))}
+                    className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'
+                  >
                     {item.name}
                   </p>
+                  <button onClick={() => dispatch(removeToCart(item))}>
+                    remove
+                  </button>
                 </div>
               </div>
             </div>
