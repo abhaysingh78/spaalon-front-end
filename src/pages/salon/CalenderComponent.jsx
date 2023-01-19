@@ -18,6 +18,10 @@ const CalenderComponent = ({ address, shopservice }) => {
   const [women, setWomen] = useState(false);
   const [men, setMen] = useState(true);
 
+  const [isAddButtonClick, setIsAddButtonClick] = useState(false);
+
+  const [itemAdd, setItemAdd] = useState(null);
+
   const menData = [];
   const womenData = [];
 
@@ -86,7 +90,7 @@ const CalenderComponent = ({ address, shopservice }) => {
         {men &&
           menData.map((service) => {
             return (
-              <div>
+              <div key={service.id}>
                 <div className="my-8 p-2">
                   <h5 className="text-md font-semibold  mb-4">
                     {service.subcat}
@@ -105,9 +109,32 @@ const CalenderComponent = ({ address, shopservice }) => {
                         {service.sale_price - service.discount}{" "}
                       </span>
                       <button className="bg-orange-600 text-white py-[2px] px-4 rounded ">
-                        Add +
+                        {` Add +`}
                       </button>
+                      {isAddButtonClick && (
+                        <div className="my-4 p-2 flex mr-16">
+                          <select className="p-2 mr-2" name="cars" id="cars">
+                            <option value="volvo">alkfa</option>
+                            <option value="saab">ajladjl</option>
+                          </select>
+
+                          <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <Stack spacing={3}>
+                              <DateTimePicker
+                                label="Select Date and Time"
+                                value={value}
+                                onChange={handleChange}
+                                renderInput={(params) => (
+                                  <TextField {...params} />
+                                )}
+                              />
+                            </Stack>
+                          </LocalizationProvider>
+                        </div>
+                      )}
                     </div>
+
+                    {}
                   </div>
                 </div>
               </div>
@@ -137,6 +164,27 @@ const CalenderComponent = ({ address, shopservice }) => {
                       <button className="bg-orange-600 text-white py-[2px] px-4 rounded ">
                         Add +
                       </button>
+                      {isAddButtonClick && (
+                        <div className="my-4 p-2 flex mr-16">
+                          <select className="p-2 mr-2" name="cars" id="cars">
+                            <option value="volvo">alkfa</option>
+                            <option value="saab">ajladjl</option>
+                          </select>
+
+                          <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <Stack spacing={3}>
+                              <DateTimePicker
+                                label="Select Date and Time"
+                                value={value}
+                                onChange={handleChange}
+                                renderInput={(params) => (
+                                  <TextField {...params} />
+                                )}
+                              />
+                            </Stack>
+                          </LocalizationProvider>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

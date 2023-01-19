@@ -12,6 +12,8 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import MenuItem from "@mui/material/MenuItem";
+import axios from "axios";
 
 function Copyright(props) {
   return (
@@ -45,15 +47,54 @@ export default function SignUp() {
 
   const [signUpForm, setSignUpForm] = React.useState(defaultFields);
 
-  const handleChange = (e) => {};
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSignUpForm((prev) => {
+      return { ...prev, [name]: value };
     });
+  };
+
+  console.log(signUpForm, "form baby");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const user = {
+      first_name: signUpForm.first_name,
+      last_name: signUpForm.last_name,
+      email: signUpForm.email,
+      mobile: signUpForm.mobile,
+      gender: signUpForm.gender,
+      password: signUpForm.password,
+    };
+    const options = {
+      method: "post",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    };
+
+    try {
+      // const res = await fetch(
+      //   "https://spaalon.harij.in/api/users/SignUp",
+      //   options
+      // );
+
+      const res = await axios({
+        method: "post",
+        url: "https://spaalon.harij.in/api/users/SignUp",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(signUpForm),
+      });
+
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -117,15 +158,19 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Gender"
-                  type="Gender"
-                  id="Gender"
+                  id="gender"
+                  className="w-full"
+                  select
+                  name="gender"
+                  label="Gender *"
                   onChange={handleChange}
-                  autoComplete=""
-                />
+                >
+                  {["Male", "Female"].map((el) => (
+                    <MenuItem key={el} value={el}>
+                      {el}
+                    </MenuItem>
+                  ))}
+                </TextField>
               </Grid>{" "}
               <Grid item xs={12}>
                 <TextField
@@ -133,7 +178,7 @@ export default function SignUp() {
                   fullWidth
                   id="phone"
                   label="Phone Number"
-                  name=""
+                  name="mobile"
                   onChange={handleChange}
                   autoComplete=""
                 />
@@ -174,3 +219,9 @@ export default function SignUp() {
     </ThemeProvider>
   );
 }
+// const data = new FormData(event.currentTarget);
+// console.log({
+//   email: data.get("email"),
+//   password: data.get("password"),
+//   lastName: data.get("lastName"),
+// });
