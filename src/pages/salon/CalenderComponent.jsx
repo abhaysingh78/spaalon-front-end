@@ -12,12 +12,32 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
-const CalenderComponent = () => {
+const CalenderComponent = ({ address, shopservice }) => {
   const [time, setTime] = React.useState(dayjs("2014-08-18T21:11:54"));
+
+  const [women, setWomen] = useState(false);
+  const [men, setMen] = useState(true);
+
+  const menData = [];
+  const womenData = [];
+
+  shopservice.map((service) => {
+    if (service.category === "Men") {
+      menData.push(service);
+    } else if (service.category === "Women") {
+      womenData.push(service);
+    }
+  });
+
+  console.log(menData, "menData");
+  console.log(womenData, "WomenData");
 
   const handleChange = (time) => {
     setTime(time);
   };
+
+  console.log(shopservice, "props service");
+
   const [value, onChange] = useState(new Date());
   return (
     <div class="parent md:mx-48 mb-8">
@@ -28,41 +48,101 @@ const CalenderComponent = () => {
         </h5>
         <p className="text-black my-8">Salon Has All Amenities</p>
         <h4 className="text-black text-center  text-2xl mb-4 ">Our Services</h4>
-        <div className="flex mt-8 space-x-[12rem]">
+        <div className="my-8 flex space-x-[35rem]">
           <div>
             <input type="text" className="p-2  bg-[#EEEEEE] w-64 rounded" />
             <button className="p-2 rounded-r-sm text-white bg-orange-600">
               Search
             </button>
           </div>
-          <div>
-            <button className="py-2 px-2  rounded-sm text-white bg-orange-600 border text-sm  ">
+          <div className="">
+            <button
+              onClick={() => {
+                setWomen(false);
+                setMen(true);
+              }}
+              className={`py-2 px-2  rounded-sm border text-sm  ${
+                men ? "bg-orange-600 text-white" : "text-black"
+              }  `}
+            >
               Men
             </button>
-            <button className="py-2 px-2  rounded-sm border text-sm ">
+            <button
+              onClick={() => {
+                setMen(false);
+                setWomen(true);
+              }}
+              className={`py-2 px-2  rounded-sm border text-sm  ${
+                women ? "bg-orange-600 text-white" : "text-black"
+              }  `}
+            >
               Women
             </button>
-            <button className="py-2 px-2 rounded-sm border text-sm ">
+            {/* <button className="py-2 px-2 rounded-sm border text-sm ">
               Children
-            </button>
+            </button> */}
           </div>
         </div>{" "}
-        <div>
-          <div className="my-4 p-2">
-            <h5 className="text-md font-semibold  mb-4">Hair Cut </h5>
-            <div className="flex space-x-[26rem]">
-              <p className="text-black text-md">
-                Men's HairCut <span className="text-orange-600 ml-2">Men</span>{" "}
-              </p>
+        {men &&
+          menData.map((service) => {
+            return (
               <div>
-                <span className="mr-2 font-semibold">0.00 </span>
-                <button className="bg-orange-600 text-white py-[2px] px-8 rounded ">
-                  Add +
-                </button>
+                <div className="my-8 p-2">
+                  <h5 className="text-md font-semibold  mb-4">
+                    {service.subcat}
+                  </h5>
+                  <div className="flex space-x-[35rem]">
+                    <p className="text-black text-md">
+                      {service.name}
+                      <span className="text-orange-600 ml-2">{`${service.category}`}</span>{" "}
+                    </p>
+                    <div className="">
+                      <span className="mr-8 font-semibold line-through  text-orange-600">
+                        <span className="text-black">{service.sale_price}</span>
+                      </span>
+                      <span className=" font-semibold mr-4">
+                        {" "}
+                        {service.sale_price - service.discount}{" "}
+                      </span>
+                      <button className="bg-orange-600 text-white py-[2px] px-4 rounded ">
+                        Add +
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
+            );
+          })}
+        {women &&
+          womenData.map((service) => {
+            return (
+              <div>
+                <div className="my-8 p-2">
+                  <h5 className="text-md font-semibold  mb-4">
+                    {service.subcat}
+                  </h5>
+                  <div className="flex space-x-[35rem]">
+                    <p className="text-black text-md">
+                      {service.name}
+                      <span className="text-orange-600 ml-2">{`${service.category}`}</span>{" "}
+                    </p>
+                    <div className="">
+                      <span className="mr-8 font-semibold line-through  text-orange-600">
+                        <span className="text-black">{service.sale_price}</span>
+                      </span>
+                      <span className=" font-semibold mr-4">
+                        {" "}
+                        {service.sale_price - service.discount}{" "}
+                      </span>
+                      <button className="bg-orange-600 text-white py-[2px] px-4 rounded ">
+                        Add +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         <div className="my-16 bg-[#F9F9F9] p-4">
           <h1 className="text-2xl text-center mb-8 font-semibold">
             How to locate us
@@ -71,7 +151,8 @@ const CalenderComponent = () => {
             <div>
               <h4 className="font-semibold">Address</h4>
               <p className="text-black ">
-                Gali No 3-Shantinagar Colony,Noida-201301
+                {address &&
+                  `${address.street_address_1} ${address.street_address_2}`}
               </p>
               <p className="my-4 text-black ">Follow Us</p>
             </div>
@@ -89,7 +170,7 @@ const CalenderComponent = () => {
         </div>
       </div>
 
-      <div class="item last outline-dotted outline-1 outline-offset-1">
+      {/* <div class="item last outline-dotted outline-1 outline-offset-1">
         {" "}
         <div className="bg-[#F8F8F8] py-4">
           <h1 className="text-center text-2xl  my-2 p-1">
@@ -131,7 +212,7 @@ const CalenderComponent = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

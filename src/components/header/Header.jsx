@@ -71,7 +71,7 @@ const Header = () => {
                             key={submenu.id}
                             className="text-sm hover:bg-slate-100 leading-8"
                             onMouseEnter={() => setIsShown(true)}
-                            onMouseLeave={() => setIsShown(false)}
+                            onMouseLeave={() =>  setIsShown(false)}
                           >
                             <a href="#">{submenu.name}</a>
                             <i className="fa-solid fa-chevron-down fa-2xs pt-3"></i>
