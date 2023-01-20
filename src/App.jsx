@@ -9,16 +9,16 @@ import SignUp from "./pages/signup/SignUp";
 
 function App() {
   return (
-    <div className=''>
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path='/category/hair' element={<Category />} />
-          <Route path='/salon/details/:id' element={<Salon />} />
-          <Route path='/Signin' element={<SignIn />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/my-booking' element={<MyBooking />} />
-          <Route path='/my-cart' element={<CartItem />} />
+          <Route path="/category/hair" element={<Category />} />
+          <Route path="/salon/details/:id" element={<Salon />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/my-booking" element={<MyBooking />} />
+          <Route path="/my-cart" element={<CartItem />} />
         </Routes>
       </BrowserRouter>
     </div>
