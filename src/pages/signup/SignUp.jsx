@@ -54,7 +54,7 @@ export default function SignUp() {
     });
   };
 
-  console.log(signUpForm, "form baby");
+  console.log(signUpForm, "form ");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -125,10 +125,10 @@ export default function SignUp() {
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="first_name"
                   required
                   fullWidth
-                  id="firstName"
+                  id="first_name"
                   label="First Name"
                   onChange={handleChange}
                   autoFocus
@@ -138,9 +138,9 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
+                  id="last_name"
                   label="Last Name"
-                  name="lastName"
+                  name="last_name"
                   onChange={handleChange}
                   autoComplete="family-name"
                 />
