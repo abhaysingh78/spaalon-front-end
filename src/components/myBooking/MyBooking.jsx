@@ -23,9 +23,12 @@ const MyBooking = () => {
     createData("Gingerbread", 356, 16.0, 49, 3.9),
   ];
 
-  const tableData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const dataPerRow = 2;
   const [next, setNext] = useState(dataPerRow);
+
+  const [orderHistory, setOrderHistory] = useState([]);
+
+  const tableData = [];
 
   const handleMoreData = () => {
     setNext(next + dataPerRow);
@@ -40,20 +43,24 @@ const MyBooking = () => {
           user_id: 1,
         },
       });
+
+      setOrderHistory(result.data.order);
       console.log(result);
     };
     fetchApi();
   }, []);
 
+  console.log(orderHistory);
+
   return (
     <>
       <Header />
       {/* <div className='block sm:flex mx-[15%] my-[5%]'> */}
-      <div class='container'>
-        <div className='account'>
-          <div className='account-menu'>
-            <div className='custom-cardContent'>
-              <div className='card-heading'>MY ACCOUNTS</div>
+      <div class="container">
+        <div className="account">
+          <div className="account-menu">
+            <div className="custom-cardContent">
+              <div className="card-heading">MY ACCOUNTS</div>
               <ul>
                 <li>My Account</li>
                 <li>Booking-History</li>
@@ -61,36 +68,44 @@ const MyBooking = () => {
             </div>
           </div>
 
-          <div className='container'>
-            <div className='account-content'>
-              <div class='table-heading'>Booking history</div>
-              <table class='tablet able-bordered custom-table'>
+          <div className="container">
+            <div className="account-content">
+              <div class="table-heading">Booking history</div>
+              <table class="tablet able-bordered custom-table">
                 <thead>
                   <tr>
-                    <th scope='col'>Booking Id</th>
-                    <th scope='col'>Booking data</th>
-                    <th scope='col'>Booking slot</th>
-                    <th scope='col'>Created date</th>
-                    <th scope='col'>Shop name</th>
-                    <th scope='col'>OTP</th>
-                    <th scope='col'>State</th>
-                    <th scope='col'>Status</th>
-                    <th scope='col'>Net amount</th>
+                    <th scope="col">Booking Id</th>
+                    <th scope="col">Booking data</th>
+                    <th scope="col">Booking slot</th>
+                    <th scope="col">Created date</th>
+                    <th scope="col">Shop name</th>
+                    <th scope="col">OTP</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Net amount</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {tableData.slice(0, next)?.map(data => {
+                  {orderHistory?.slice(0, next)?.map((data) => {
                     return (
-                      <tr>
-                        <td>{data}</td>
+                      <tr key={data.id}>
+                        <td>{data.id}</td>
+                        <td>{data.id}</td>
+                        <td>{data.id}</td>
+                        <td>{new Date(data.created).toLocaleDateString()}</td>
+                        <td>{data.id}</td>
+                        <td>{data.id}</td>
+                        <td>{data.id}</td>
+                        <td>{data.order_status}</td>
+                        <td>{data.id}</td>
                       </tr>
                     );
                   })}
                 </tbody>
               </table>
               {next < tableData?.length && (
-                <div class='load-more'>
-                  <button onClick={handleMoreData} className='btn_1'>
+                <div class="load-more">
+                  <button onClick={handleMoreData} className="btn_1">
                     Load more
                   </button>
                 </div>

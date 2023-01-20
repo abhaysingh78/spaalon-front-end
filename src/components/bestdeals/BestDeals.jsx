@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const BestDeals = () => {
   const [bestShop, setBestShop] = useState([]);
@@ -35,26 +36,28 @@ export const BestDeals = () => {
         {bestShop &&
           bestShop?.map((el) => {
             return (
-              <div className="my-4 md:mr-2" key={el.id}>
-                <a
-                  href="#"
-                  class="flex flex-col items-center   md:w-[35rem] bg-white border rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 hover:"
-                >
-                  <img
-                    class="object-cover w-full rounded-t-lg h-32 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg   "
-                    src={`${el.image_url}`}
-                    alt=""
-                  />
-                  <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2  text-xl font-bold tracking-tight text-black">
-                      {el.shop_name}
-                    </h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      {el.description}
-                    </p>
-                  </div>
-                </a>
-              </div>
+              <Link to={`/salon/details/${el.id}`}>
+                <div className="my-4 md:mr-2" key={el.id}>
+                  <a
+                    href="#"
+                    class="flex flex-col items-center   md:w-[35rem] bg-white border rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 hover:"
+                  >
+                    <img
+                      class="object-cover w-full rounded-t-lg h-32 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg   "
+                      src={`${el.image_url}`}
+                      alt=""
+                    />
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                      <h5 class="mb-2  text-xl font-bold tracking-tight text-black">
+                        {el.shop_name}
+                      </h5>
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                        {el.description}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </Link>
             );
           })}
 
