@@ -14,6 +14,8 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import MenuItem from "@mui/material/MenuItem";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Copyright(props) {
   return (
@@ -76,22 +78,15 @@ export default function SignUp() {
     };
 
     try {
-      // const res = await fetch(
-      //   "https://spaalon.harij.in/api/users/SignUp",
-      //   options
-      // );
+      const res = await fetch(
+        "https://spaalon.harij.in/api/users/SignUp",
+        options
+      );
 
-      const res = await axios({
-        method: "post",
-        url: "https://spaalon.harij.in/api/users/SignUp",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(signUpForm),
-      });
-
-      console.log(res);
+      console.log(res.status);
+      if (res.status === 201) {
+        alert("user Created");
+      }
     } catch (error) {
       console.log(error);
     }
