@@ -37,16 +37,43 @@ export default function SignIn() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get("email"),
       password: data.get("password"),
     });
+
+    const user = {
+      email: email,
+      password: password,
+    };
+    const options = {
+      method: "post",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    };
+
+    try {
+      const res = await fetch(
+        "https://spaalon.harij.in/api/users/EmailLogin",
+        options
+      );
+      console.log(res);
+      // console.log(res.status);
+      if (res.status === 201) {
+        alert("user login");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  console.log(email, password, "both");
+  // console.log(email, password, "both");
 
   return (
     <ThemeProvider theme={theme}>

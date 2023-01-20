@@ -56,7 +56,7 @@ export default function SignUp() {
     });
   };
 
-  console.log(signUpForm, "form ");
+  // console.log(signUpForm, "form ");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -83,7 +83,7 @@ export default function SignUp() {
         options
       );
 
-      console.log(res.status);
+      // console.log(res.status);
       if (res.status === 201) {
         alert("user Created");
       }
