@@ -136,22 +136,24 @@ const Header = () => {
                 </a>
               </li>
             </Link>
-            <li>
-              {" "}
-              <a
-                href='#'
-                className='  rounded-3xl hidden md:flex'
-                role='button'
-              >
-                <img
-                  className=''
-                  width={22}
-                  src='https://cdn-icons-png.flaticon.com/512/687/687259.png'
-                  alt=''
-                />
-                {state?.carts && state?.carts?.length}
-              </a>
-            </li>
+            <Link to='/my-cart'>
+              <li>
+                {" "}
+                <a
+                  href='#'
+                  className='  rounded-3xl hidden md:flex'
+                  role='button'
+                >
+                  <img
+                    className=''
+                    width={22}
+                    src='https://cdn-icons-png.flaticon.com/512/687/687259.png'
+                    alt=''
+                  />
+                  {state?.carts && state?.carts?.length}
+                </a>
+              </li>
+            </Link>
           </ul>
 
           {/* <!-- Mobile menu icon --> */}

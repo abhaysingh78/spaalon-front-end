@@ -8,7 +8,7 @@ const addToCartReducer = (state = initProduct, action) => {
   switch (action.type) {
     case ADD_TO_CART:
       const IteamIndex = state.carts.findIndex(
-        iteam => iteam.category_id === action.payload.category_id
+        iteam => iteam.id === action.payload.id
       );
 
       if (IteamIndex >= 0) {
@@ -26,9 +26,7 @@ const addToCartReducer = (state = initProduct, action) => {
       }
 
     case REMOVE_TO_CART:
-      const data = state.carts.filter(
-        el => el.category_id !== action.payload.category_id
-      );
+      const data = state.carts.filter(el => el.id !== action.payload.id);
       return {
         ...state,
         carts: data,

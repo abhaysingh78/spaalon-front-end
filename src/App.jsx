@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CartItem from "./components/cartItem/CartItem";
 import MyBooking from "./components/myBooking/MyBooking";
 import Category from "./pages/category/Category";
 import Home from "./pages/home/Home";
@@ -17,6 +18,7 @@ function App() {
           <Route path='/Signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/my-booking' element={<MyBooking />} />
+          <Route path='/my-cart' element={<CartItem />} />
         </Routes>
       </BrowserRouter>
     </div>

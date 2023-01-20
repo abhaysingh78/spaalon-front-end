@@ -2,15 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeToCart } from "../../redux/action/Action";
 
 const Trending = ({ heading, dec, align, bg, style }) => {
   const [trending, setTrending] = useState([]);
 
-  const state = useSelector(state => state.addToCartReducer);
-  const dispatch = useDispatch();
-  console.log(state);
   const fetchApi = async () => {
     let result = await fetch(
       "https://spaalon.harij.in/api/shop/TrendingService"
@@ -69,15 +64,9 @@ const Trending = ({ heading, dec, align, bg, style }) => {
                     className='rounded-full'
                   />
 
-                  <p
-                    onClick={() => dispatch(addToCart(item))}
-                    className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'
-                  >
+                  <p className='mt-2 text-xs sm:text-sm md:text-base font-semibold text-center text-black'>
                     {item.name}
                   </p>
-                  <button onClick={() => dispatch(removeToCart(item))}>
-                    remove
-                  </button>
                 </div>
               </div>
             </div>
